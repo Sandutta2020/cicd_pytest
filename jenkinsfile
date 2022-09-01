@@ -1,7 +1,8 @@
 pipeline {
     agent any
 
-    stage('Build') {
+     stages {
+        stage('Build') {
             steps {
                 echo 'We are cloning the repository'
                 bat "git clone https://github.com/Sandutta2020/cicd_pytest.git"
