@@ -8,7 +8,7 @@ class class_loading:
         self.cur = self.conn.cursor()
         self.sql="Create table if not exists password_check(password text NOT NULL,strength text NOT NULL)"
         self.cur.execute(self.sql) 
-        self.passwords = [("Password", "Medium"),("calvin", "Poor"),("Password@123", "Strong"),("123", "Strong"),("@##@@", "Poor")]
+        self.passwords = [("Password", "Medium"),("calvin", "Poor"),("Password@123", "Strong"),("123", "Poor"),("@##@@", "Poor")]
         self.insertsql = ''' INSERT INTO password_check(password,strength)  VALUES(?,?) '''
         self.cur.executemany(self.insertsql,self.passwords)
         self.conn.commit()
