@@ -1,20 +1,22 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Build') {
+    stage('Build') {
             steps {
-                echo "%cd%"
+                echo 'We are cloning the repository'
+                bat "git clone https://github.com/Sandutta2020/cicd_pytest.git"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing'
+                bat 'echo %WORKSPACE%'
+                bat 'pytest %WORKSPACE%\\cicd_pytest\\run_python.py --maxfail 2'
             }
         }
-        stage('Deploy') {
+        stage('Teardown') {
             steps {
-                echo 'Deploying'
+                bat "cd .."
+                bat "rmdir /S /Q %WORKSPACE%\\cicd_pytest"
             }
         }
     }
