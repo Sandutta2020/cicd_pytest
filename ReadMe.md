@@ -13,3 +13,10 @@ pytest run_python.py
 
 Generate Report :
 pytest run_python.py --html=Report.html
+
+This is thr basic test testing password strength 
+if password can consists  of any catagory like  alphabet,number, special charactor,and upper case charactor .
+we can consider password stength "Strong","Medium" or "Poor".
+  1) if only 1 catagory then poor
+  2) if more than 1 catagory then medium
+  3) if more than 2 category then Strong
