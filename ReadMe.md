@@ -20,3 +20,9 @@ we can consider password stength "Strong","Medium" or "Poor".
   1) if only 1 catagory then poor
   2) if more than 1 catagory then medium
   3) if more than 2 category then Strong
+
+Activate python conda create environment:
+
+conda create -n pytest_env python=3.8
+conda activate pytest_env
+pip install -r requirements.txt

@@ -18,8 +18,6 @@ class class_loading:
         df = pd.read_sql_query("select  password,strength from password_check", self.conn)
         #print(df)
         return df
-
-
     def __del__(self):
         print("Closing  connection for sqlite db")
         self.conn.close()

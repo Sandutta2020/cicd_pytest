@@ -1,1 +1,4 @@
 .pyc
+__pycache__/run_python.cpython-37-pytest-5.3.5.pyc
+classfile/__pycache__/class_loading.cpython-37.pyc
+classfile/__pycache__/pass_check.cpython-37.pyc
