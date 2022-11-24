@@ -1,7 +1,7 @@
 import re
 def check_password_strength(pword):
     cnt =0
-    if len(pword) <= 3 | len(pword) >  64:
+    if len(pword) <= 2 | len(pword) >  64:
         return 'Invalid'
     if len(re.findall("[@!$&]", pword)) > 0:
         cnt +=1

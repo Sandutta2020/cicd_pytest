@@ -26,3 +26,7 @@ Activate python conda create environment:
 conda create -n pytest_env python=3.8
 conda activate pytest_env
 pip install -r requirements.txt
+
+
+How to open Jenkins:
+java -jar jenkins.war
